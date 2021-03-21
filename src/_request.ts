@@ -31,7 +31,7 @@ interface RequestParamObject {
   opations?: {};
 }
 
-function RequestMapping(request: RequestParamObject) {
+function RequestMapping(request: RequestParamObject): any {
   return (target: any, propertyName: string, descriptor: PropertyDescriptor) => {
     let func = descriptor.value;
     if ('function' === typeof func) {

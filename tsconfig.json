@@ -19,12 +19,13 @@
     "paths": {
       "*": [
         "node_modules/*",
-        "src/types/*",
+        "src/*",
+        "test/"
       ]
     }
   },
   "include": [
-    "src/**/*", "public",
+    "src/**/*", "public","test/**/*"
   ],
   "exclude": [
     "node_modules",
