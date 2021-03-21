@@ -1,26 +1,35 @@
 {
-  "name": "got-plus",
+  "name": "koa2-demo",
   "version": "1.0.0",
-  "description": "Send http request via annotation by got",
+  "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "build": "npm run clean && npm run build-ts",
+    "clean": "rimraf ./dist",
+    "build-ts": "tsc",
+    "watch-ts": "tsc -w",
+    "upgrade": "npm update --save-dev && npm update --save",
+    "eslint": "eslint . --ext .js,.ts"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/bestjss/got-plus.git"
+    "url": "git@e.coding.net:jsduan/study/koa2-demo.git"
   },
-  "keywords": [
-    "nodejs",
-    "got",
-    "http-request",
-    "rest",
-    "annotation"
-  ],
-  "author": "litchi.duan",
-  "license": "MIT",
-  "bugs": {
-    "url": "https://github.com/bestjss/got-plus/issues"
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "got": "^11.8.2",
+    "node-cache": "^5.1.2",
+    "reflect-metadata": "^0.1.13",
+    "urlencode": "^1.1.0",
+    "rimraf": "^3.0.2"
   },
-  "homepage": "https://github.com/bestjss/got-plus#readme"
+  "devDependencies": {
+    "@types/got": "^9.6.11",
+    "@types/node": "^14.14.35",
+    "@types/urlencode": "^1.1.2",
+    "nodemon": "^2.0.7",
+    "prettier": "^2.2.1",
+    "ts-node": "^9.1.1"
+  }
 }
