@@ -25,15 +25,34 @@
 
 ```js
 // Use E.g
+/**
+ * define a get request
+ **/
+
 @RequestMapping({
-    url: 'http://host',
+     url: 'http://third-service-host/id/{id}/name/{name}',
     method: RequestMethod.GET,
 })
-async get(
+async myThirdGet(
     @Header() header, // HeaderSetting
     @PathVariable({ name: 'id' }) id, // PathParam
     @PathVariable({ name: 'name' }) name, // PathParam
     @QueryParam() query, // Queryparam
+) {}
+
+/**
+ * define a put request
+ *  
+ **/
+@RequestMapping({
+    url: 'http://third-service-host/id/{id}',
+    method: RequestMethod.PUT,
+})
+async myThirdPut(
+    @Header() header, // HeaderSetting
+    @PathVariable({ name: 'id' }) id, // PathParam
+    @QueryParam() query, // Queryparam
+    @Body() body, // Queryparam
 ) {}
 ```
 
