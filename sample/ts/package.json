@@ -15,7 +15,7 @@
   "license": "ISC",
   "dependencies": {
     "debug": "^4.1.1",
-    "got-plus": "^1.0.1"
+    "got-plus": "^1.0.2"
   },
   "devDependencies": {
     "rimraf": "^3.0.2",
