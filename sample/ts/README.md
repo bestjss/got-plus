@@ -1,37 +1,20 @@
 # Ts with got plush guid
 
-1. Install babel env
-
-```sh
-$ npm install @babel/core @babel/register --save-dev
-$ npm install --save-dev @babel/plugin-proposal-decorators
-$ npm install --save-dev @babel/plugin-proposal-class-properties
-```
-
-2. Create a `.babelrc` file
-
-```json
-{
-  "presets": ["@babel/preset-env"],
-  "plugins": [
-    ["@babel/plugin-proposal-decorators", { "legacy": true }],
-    "babel-plugin-parameter-decorator",
-    ["@babel/plugin-proposal-class-properties", { "loose": true }],
-    "@babel/plugin-transform-runtime"
-  ]
-}
-
-```
-
-3. Install got-plus
+1. Install got-plus
 
 ```sh
 $ npm i got-plus --save
 ```
 
-4. Add `require('@babel/register');` to your start file , such as `index.js`
+2. Add a key to tsconfig.json
+```json
+{
+    "experimentalDecorators": true,
+    "emitDecoratorMetadata": true,
+}
+```
 
-5. Test Sampe
+3. Test Sampe
 
 ```sh
 # Start
