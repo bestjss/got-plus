@@ -7,4 +7,5 @@
 
 ## Guide
 
-```
+### 1. Use [got-plus in JS](./sample/js/README.md) 
+### 2. Use [got-plus in TS](./sample/ts/README.md) 
